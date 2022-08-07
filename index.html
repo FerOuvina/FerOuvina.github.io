@@ -6,7 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encriptador</title>
+  <!-- CSS -->
   <link rel="stylesheet" href="master.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,12 +19,6 @@
   <!-- start of header -->
   <header>
     <h1>Encriptador</h1>
-    <nav>
-      <ul>
-        <li>Inicio</li>
-        <li>Más información</li>
-      </ul>
-    </nav>
   </header>
   <!-- end of header -->
 
@@ -27,12 +26,11 @@
   <section>
     <!-- start of left-side article -->
     <article>
-      <form action="">
-        <label for="input"></label>
-        <textarea name="input" id="inputText" cols="30" rows="10" placeholder="Ingrese aquí su texto a encriptar..." tabindex="1"></textarea>
-        <p>&#9888; Solo se acepta el uso de letras minúsculas y sin acentos</p>
-        <input type="button" value="Encriptar" id="encrypt" onclick="encrypter()">
-        <input type="button" value="Desencriptar" id="decrypt" onclick="decrypter()">
+      <form>
+        <input type="text" name="input" id="inputText">
+        <p>&#9888; Solo se acepta el uso de letras minúsculas y sin acentos.</p>
+        <button type="button" value="Encriptar" id="encrypt" onclick="encrypter()">Encriptar</button>
+        <button type="button" value="Desencriptar" id="decrypt" onclick="decrypter()">Desencriptar</button>
       </form>
     </article>
     <!-- end of left-side article -->
@@ -47,7 +45,7 @@
   <!-- end of main section -->
 
 
-
+  <!-- JS Script -->
   <script src="script.js"></script>
 
 </body>

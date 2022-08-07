@@ -1,16 +1,17 @@
-const getInput = document.getElementById('inputText').value;
-getInput.focus();
-const encryptedText = [];
+const getInput = document.getElementById('inputText');
+let textToEncrypt = '';
 let decryptedText = null;
 
 function encrypter() {
-  for (let i = 0; i < getInput.length; i++) {
-    if (getInput[i] === 'e') {encryptedText[i] = 'enter';
-    } else if (getInput[i] === 'i') {encryptedText[i] = 'imes';
-    } else if (getInput[i] === 'a') {encryptedText[i] = 'ai';
-    } else if (getInput[i] === 'o') {encryptedText[i] = 'ober';
-    } else if (getInput[i] === 'u') {encryptedText[i] = 'ufat';
-    } else {encryptedText[i] = getInput[i]};
+  textToEncrypt = getInput.value;
+  const encryptedText = [];
+  for (let i = 0; i < textToEncrypt.length; i++) {
+    if (textToEncrypt[i] === 'e') {encryptedText[i] = 'enter';
+    } else if (textToEncrypt[i] === 'i') {encryptedText[i] = 'imes';
+    } else if (textToEncrypt[i] === 'a') {encryptedText[i] = 'ai';
+    } else if (textToEncrypt[i] === 'o') {encryptedText[i] = 'ober';
+    } else if (textToEncrypt[i] === 'u') {encryptedText[i] = 'ufat';
+    } else {encryptedText[i] = textToEncrypt[i]};
   };
   let finalText = encryptedText.join('');
   // document.getElementById('inputText').innerHTML = finalText;
@@ -19,6 +20,6 @@ function encrypter() {
 };
 
 function decrypter() {
-    decryptedText = getInput.replace(/enter/g, 'e').replace(/imes/g,'i').replace(/ai/g,'a').replace(/ober/g,'o').replace(/ufat/g,'u');
+    decryptedText = textToEncrypt.replace(/enter/g, 'e').replace(/imes/g,'i').replace(/ai/g,'a').replace(/ober/g,'o').replace(/ufat/g,'u');
     console.log(decryptedText)
 };
