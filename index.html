@@ -11,40 +11,49 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/5fc0185a9e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
   <!-- start of header -->
   <header>
-    <h1>Encriptador</h1>
+    <h1 id="title" class="animated">Encriptador</h1>
   </header>
   <!-- end of header -->
-
+  
   <!-- start of main section -->
   <section>
     <!-- start of left-side article -->
-    <article>
-      <form>
-        <input type="text" name="input" id="inputText">
+    <article class="leftArticle">
+      <textarea name="input" id="inputText" cols="30" rows="10" placeholder="Ingrese aquí su texto a encriptar..."></textarea>
+      <div class="bottomContainer">
         <p>&#9888; Solo se acepta el uso de letras minúsculas y sin acentos.</p>
-        <button type="button" value="Encriptar" id="encrypt" onclick="encrypter()">Encriptar</button>
-        <button type="button" value="Desencriptar" id="decrypt" onclick="decrypter()">Desencriptar</button>
-      </form>
+        <div class="btnContainer">
+          <button type="button" value="Encriptar" id="encrypt" onclick="encrypter()" class="btn">Encriptar</button>
+          <button type="button" value="Desencriptar" id="decrypt" onclick="decrypter()" class="btn">Desencriptar</button>
+        </div>
+      </div>
     </article>
     <!-- end of left-side article -->
 
     <!-- start of right-side article -->
-    <article>
-      <label for="outputText"></label>
-      <textarea name="outputText" id="outputText" cols="30" rows="10" disabled></textarea>
+    <article class="rightArticle">
+      <textarea name="outputText" id="outputText" cols="30" rows="10" readonly class="textNotFound" >Ningún mensaje fue encontrado</textarea>
+      <button type="button" id="copyToClipboard" onclick="copyToClipboard()" class="btn">Copiar Texto</button>
     </article>
     <!-- end of right-side article -->
   </section>
   <!-- end of main section -->
 
-
+  <!-- Start of Footer -->
+  <footer>
+    <a href="https://github.com/FerOuvina"><i class="fa-brands fa-square-github"></i> My GitHub</a>
+    <a href="https://www.linkedin.com/in/fernando07/"><i class="fa-brands fa-linkedin"></i> My LinkedIn</a>
+  </footer>
+  <!-- End of Footer -->
   <!-- JS Script -->
   <script src="script.js"></script>
 

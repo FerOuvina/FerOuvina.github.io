@@ -1,6 +1,6 @@
+// Setting the encrypter function
 const getInput = document.getElementById('inputText');
 let textToEncrypt = '';
-let decryptedText = null;
 
 function encrypter() {
   textToEncrypt = getInput.value;
@@ -14,12 +14,22 @@ function encrypter() {
     } else {encryptedText[i] = textToEncrypt[i]};
   };
   let finalText = encryptedText.join('');
-  // document.getElementById('inputText').innerHTML = finalText;
-  // document.write(finalText);
-  console.log(finalText)
+  document.getElementById('outputText').innerHTML = finalText;
+  document.getElementById('outputText').className = 'textFound';
 };
 
+// Setting the decrypter function
+let decryptedText = null;
 function decrypter() {
+    textToEncrypt = getInput.value;
     decryptedText = textToEncrypt.replace(/enter/g, 'e').replace(/imes/g,'i').replace(/ai/g,'a').replace(/ober/g,'o').replace(/ufat/g,'u');
-    console.log(decryptedText)
+    document.getElementById('outputText').innerHTML = decryptedText;
+  };
+
+// Setting the copyToClipboard function
+function copyToClipboard() {
+  let getTextToCopy = document.getElementById("outputText");
+  getTextToCopy.select();
+  getTextToCopy.setSelectionRange(0, 999999);
+  navigator.clipboard.writeText(getTextToCopy.value);
 };
