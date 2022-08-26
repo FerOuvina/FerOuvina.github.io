@@ -24,6 +24,7 @@ function decrypter() {
     textToEncrypt = getInput.value;
     decryptedText = textToEncrypt.replace(/enter/g, 'e').replace(/imes/g,'i').replace(/ai/g,'a').replace(/ober/g,'o').replace(/ufat/g,'u');
     document.getElementById('outputText').innerHTML = decryptedText;
+    document.getElementById('outputText').className = 'textfound'
   };
 
 // Setting the copyToClipboard function
