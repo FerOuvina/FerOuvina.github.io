@@ -1,6 +1,6 @@
 :root {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-size: 16px;
   --turquoise: #99b898;
@@ -282,7 +282,7 @@ footer a:visited {
   .leftArticle textarea {
     width: 96%;
     height: 70%;
-    margin: 0 0 0 0;
+    margin: 0;
     text-align: center;
     padding: 2%;
     font-size: 1.2rem;
@@ -333,6 +333,171 @@ footer a:visited {
     margin-bottom: 2vh;
     padding: 2vw;
     text-decoration: none;
+    color: var(--turquoise);
+  }
+}
+
+@media all and (max-width: 360px) {
+  .animated {
+    margin: 1vh 0 0 15vh;
+    padding: 0.8vh;
+    width: 45%;
+    font-size: 1.5rem;
+  }
+  section {
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  .leftArticle {
+    width: 90vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .leftArticle textarea {
+    /* width: 96%; */
+    height: 25vh;
+    margin: 0;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.2rem;
+  }
+  .bottomContainer {
+    /* height: 30%; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vw;
+  }  
+  .leftArticle p {
+    margin: 1vw;
+    color: #7f8080;
+    text-align: center;
+  }
+  .btnContainer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .btn {  
+    font-size: 1rem;
+    background-color: var(--red);
+    border: 5px solid var(--red);
+  }
+  .rightArticle {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90vw;
+  }
+  .rightArticle textarea {
+    height: 50vw;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2vw;
+    border-style: none;
+    background-color: var(--yellow);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    resize: none;
+  }
+  .textNotFound{
+    background-position-y: 90%;
+    background-size: 150px;
+  }
+  footer {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer a {
+    margin-bottom: 2vh;
+    padding: 2vw;
+    text-decoration: none;
+    color: var(--turquoise);
+  }
+}
+
+@media all and (max-width: 320px) {
+  .animated {
+    margin: 1vh 0 0 13vh;
+    padding: 0.8vh;
+    width: 55%;
+    font-size: 1.5rem;
+  }
+  section {
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  .leftArticle {
+    width: 90vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .leftArticle textarea {
+    /* width: 96%; */
+    height: 25vh;
+    margin: 0;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.2rem;
+  }
+  .bottomContainer {
+    /* height: 30%; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4vw;
+  }  
+  .leftArticle p {
+    margin: 1vw;
+    color: #7f8080;
+    text-align: center;
+  }
+  .btnContainer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .btn {  
+    font-size: 1rem;
+    background-color: var(--red);
+    border: 5px solid var(--red);
+  }
+  .rightArticle {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90vw;
+  }
+  .rightArticle textarea {
+    height: 50vw;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2vw;
+    border-style: none;
+    background-color: var(--yellow);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    resize: none;
+  }
+  .textNotFound{
+    background-position-y: 90%;
+    background-size: 150px;
+  }
+  footer {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer a {
+    margin-bottom: 0;
+    padding: 2vw;
+    text-decoration: none;
+    font-size: 0.8rem;
     color: var(--turquoise);
   }
 }
